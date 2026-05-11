@@ -1,6 +1,5 @@
 from flask import Flask, request
-import mysql.connector
-
+import mysql.connector   
 app = Flask(__name__)
 
 db = mysql.connector.connect(
@@ -9,7 +8,6 @@ db = mysql.connector.connect(
     password="",
     database="studentdb"
 )
-
 cursor = db.cursor()
 
 @app.route('/add', methods=['POST'])
